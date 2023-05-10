@@ -1,0 +1,70 @@
+@import url("https://fonts.googleapis.com/css2?family=Sacramento&display=swap");
+@font-face {
+  font-family: "CCArea51Industrial";
+  src: local("CCArea51Industrial"),
+    url(/fonts/CCArea51Industrial.ttf) format("truetype");
+}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body,
+#root {
+  position: relative;
+  overflow: hidden;
+  height: 90vh;
+  height: 100svh;
+  width: 100vw;
+}
+
+@keyframes stroke {
+  0% {
+    fill: transparent;
+    stroke: rgb(255, 255, 255);
+    stroke-dashoffset: 25%;
+    stroke-dasharray: 0 50%;
+    stroke-width: 2;
+  }
+  70% {
+    fill: rgba(255, 255, 255, 0.5);
+    stroke: rgb(255, 255, 255);
+  }
+  80% {
+    fill: rgba(255, 255, 255, 0.75);
+    stroke: rgb(255, 255, 255);
+    stroke-width: 3;
+  }
+  100% {
+    fill: rgb(255, 255, 255);
+    stroke: rgb(255, 255, 255);
+    stroke-dashoffset: -25%;
+    stroke-dasharray: 50% 0;
+    stroke-width: 0;
+  }
+}
+
+.title text {
+  animation: stroke 10s forwards;
+}
+
+/* width */
+.mini-scroll::-webkit-scrollbar {
+  height: 12px;
+}
+
+/* Track */
+.mini-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Handle */
+.mini-scroll::-webkit-scrollbar-thumb {
+  background-color: rgb(40, 40, 40);
+  border-radius: 999px;
+  border: 3px solid rgba(226, 226, 226, 0.5);
+}
+
+/* Handle on hover */
+.mini-scroll::-webkit-scrollbar-thumb:hover {
+  background-color: rgb(0, 0, 0);
+}
