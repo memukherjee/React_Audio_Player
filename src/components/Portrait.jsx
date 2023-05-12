@@ -1,3 +1,6 @@
+import pritam_img from "../assets/pritam.png";
+import suman_img from "../assets/suman.png";
+
 export default function Portrait({ title }) {
   return (
     <div className="absolute inset-0 z-10 w-full text-center">
@@ -27,14 +30,14 @@ export default function Portrait({ title }) {
       <div className="absolute h-[420px] lg:h-auto bottom-0 left-4 lg:left-24">
         <img
           className="w-full h-full object-contain"
-          src="/images/pritam.png"
+          src={pritam_img}
           alt="Pritam"
         />
       </div>
       <div className="absolute h-[420px] lg:h-auto bottom-0 right-4 lg:right-24">
         <img
           className="w-full h-full object-contain"
-          src="/images/suman.png"
+          src={suman_img}
           alt="Suman"
         />
       </div>
